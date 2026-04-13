@@ -16,8 +16,8 @@
         :root {
             --primary: #1e3a8a;
             --primary-hover: #152c6b;
-            --accent: #2563eb;
-            --accent-hover: #1d4ed8;
+            --accent: #1e3a8a;
+            --accent-hover: #152c6b;
             --bg-light: #f8fafc;
             --text-main: #0f172a;
             --text-muted: #64748b;
