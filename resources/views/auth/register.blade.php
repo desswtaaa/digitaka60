@@ -93,14 +93,14 @@
             @csrf
 
             <!-- 🔥 ROLE -->
-            <input type="hidden" name="role" id="roleInput" value="user">
+            <input type="hidden" name="role" id="roleInput" value="siswa">
 
             <!-- PILIH ROLE -->
             <div class="row mb-4">
                 <div class="col-6">
                     <button type="button"
                         id="userBtn"
-                        onclick="setRole('user')"
+                        onclick="setRole('siswa')"
                         class="role-btn role-active">
                         Siswa
                     </button>
@@ -198,7 +198,7 @@
     }
 
     // Set default view
-    setRole('user');
+    setRole('siswa');
 </script>
 
 </body>

@@ -31,6 +31,13 @@ class SiswaController extends Controller
             'book_id' => 'required',
         ]);
 
+        $JumlahPinjam = Peminjaman::where('user_id', Auth::id())
+            ->where('status', 'dipinjam')
+            ->count();
+            if ($JumlahPinjam >=3){
+                return back()->with('error', 'Gagal meminjam: Anda sudah mememinjam batas maksimal (3 buku). Silakan kembalikan terlebih dahulu!');
+            }
+
         $book = Book::findOrFail($request->book_id);
         if ($book->stok < 1) {
             return back()->with('error', 'Gagal meminjam: Stok buku habis!');
